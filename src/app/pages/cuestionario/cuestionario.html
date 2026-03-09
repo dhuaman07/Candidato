@@ -1,0 +1,72 @@
+<!-- HEADER: Progreso -->
+<div class="quiz-wrapper">
+
+  <div class="quiz-header">
+    <div class="quiz-header__top">
+      <span class="quiz-label">PROGRESO DEL CUESTIONARIO</span>
+      <span class="quiz-percent">{{ progressPercent }}%</span>
+    </div>
+    <h1 class="quiz-title">Evaluación de Candidatos</h1>
+    <div class="quiz-header__meta">
+      <div class="progress-bar">
+        <div class="progress-bar__fill" [style.width.%]="progressPercent"></div>
+      </div>
+      <span class="quiz-counter">Pregunta {{ currentIndex + 1 }} de {{ questions.length }}</span>
+    </div>
+  </div>
+
+  <!-- PREGUNTAS -->
+  <div class="quiz-list">
+    <div
+      class="quiz-card"
+      *ngFor="let q of questions; let i = index"
+      [class.quiz-card--answered]="getAnswer(i)"
+    >
+      <!-- Categoría -->
+      <div class="quiz-card__category">
+        <span class="category-icon">🎓</span>
+        <span class="category-label">{{ q.category }}</span>
+      </div>
+
+      <!-- Pregunta -->
+      <p class="quiz-card__question">{{ q.question }}</p>
+
+      <!-- Opciones -->
+      <div class="quiz-card__options">
+        <button
+          class="option-btn"
+          [class.option-btn--selected]="getAnswer(i) === 'Sí'"
+          (click)="answer(i, 'Sí')"
+        >
+          Sí
+        </button>
+        <button
+          class="option-btn"
+          [class.option-btn--selected]="getAnswer(i) === 'No'"
+          (click)="answer(i, 'No')"
+        >
+          No
+        </button>
+      </div>
+
+      <!-- Link informativo -->
+      <a href="#" class="quiz-card__link">
+        <span>ⓘ</span> Ver más información sobre los requisitos
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER ACCIONES -->
+  <div class="quiz-footer">
+    <button class="btn-back" (click)="goBack()">
+      ← Anterior
+    </button>
+    <div class="quiz-footer__right">
+      <!-- <button class="btn-save" (click)="saveDraft()">Guardar borrador</button> -->
+      <button class="btn-results" routerLink="/resultados">
+        Enviar
+      </button>
+    </div>
+  </div>
+
+</div>

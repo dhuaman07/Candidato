@@ -1,0 +1,100 @@
+<!-- COVER + HEADER -->
+<div class="profile-wrapper">
+
+  <div class="profile-cover">
+    <div class="profile-cover__bg"></div>
+    <div class="profile-cover__content">
+      <div class="profile-avatar-wrap">
+        <img src="assets/images/candidato.jpg" alt="Dr. Alejandro Vargas" class="profile-avatar" />
+        <span class="profile-verified" title="Verificado">✓</span>
+      </div>
+      <div class="profile-identity">
+        <h1 class="profile-name">{{ candidate.name }}</h1>
+        <span class="profile-role">{{ candidate.role }}</span>
+        <div class="profile-tags">
+          <span class="profile-tag"><span>📍</span> {{ candidate.location }}</span>
+          <span class="profile-tag"><span>🏛️</span> {{ candidate.service }}</span>
+          <span class="profile-tag"><span>👥</span> {{ candidate.leadership }}</span>
+        </div>
+      </div>
+      <div class="profile-actions">
+        <button class="btn-follow" routerLink="/"><span></span> Regresar Inicio</button>
+        <button class="btn-share">⬆</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY: dos columnas -->
+  <div class="profile-body">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="profile-main">
+
+      <!-- Biografía -->
+      <section class="profile-card">
+        <h2 class="card-title"><span class="card-icon">👤</span> Biografía y Trayectoria</h2>
+        <p class="card-text" *ngFor="let p of candidate.bio">{{ p }}</p>
+      </section>
+
+      <!-- Experiencia -->
+      <section class="profile-card">
+        <h2 class="card-title"><span class="card-icon">💼</span> Experiencia Profesional</h2>
+        <div class="timeline">
+          <div class="timeline-item" *ngFor="let exp of candidate.experience">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">{{ exp.period }}</span>
+              <h3 class="timeline-title">{{ exp.title }}</h3>
+              <p class="timeline-desc">{{ exp.description }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formación -->
+      <section class="profile-card">
+        <h2 class="card-title"><span class="card-icon">🎓</span> Formación Académica</h2>
+        <div class="education-grid">
+          <div class="education-item" *ngFor="let edu of candidate.education">
+            <h4 class="education-degree">{{ edu.degree }}</h4>
+            <p class="education-institution">{{ edu.institution }}</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- COLUMNA DERECHA -->
+    <aside class="profile-sidebar">
+
+      <!-- CTA -->
+      <div class="sidebar-cta">
+        <h3 class="cta-title">Transformemos el futuro juntos</h3>
+        <p class="cta-text">Tu apoyo es fundamental para construir una región más fuerte, segura y próspera para todos.</p>
+        <button class="btn-support"><span>🤝</span> Apoyar Candidatura</button>
+      </div>
+
+      <!-- Stats -->
+      <div class="sidebar-stats">
+        <div class="stat-item" *ngFor="let stat of candidate.stats">
+          <div class="stat-value">{{ stat.value }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      </div>
+
+      <!-- Contacto -->
+      <div class="sidebar-contact">
+        <h4 class="contact-title">Información de Contacto</h4>
+        <ul class="contact-list">
+          <li><span>✉️</span> {{ candidate.contact.email }}</li>
+          <li><span>🌐</span> {{ candidate.contact.website }}</li>
+        </ul>
+        <div class="contact-social">
+          <a href="#" class="social-btn">𝕏</a>
+          <a href="#" class="social-btn">📷</a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+</div>
