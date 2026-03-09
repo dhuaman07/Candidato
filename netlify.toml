@@ -3,8 +3,14 @@
   publish = "dist/candidato-web/browser"
 
 [build.environment]
-  NODE_VERSION = "20"
   NETLIFY_USE_ANGULAR_RUNTIME = "false"
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/angular-runtime"
+  
+  [plugins.inputs]
+    toBeEnabled = false
 
 [[redirects]]
   from = "/*"
