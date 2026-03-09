@@ -1,6 +1,12 @@
+
 [build]
   command = "ng build --configuration production"
   publish = "dist/candidato-web/browser"
+
+[[plugins]]
+  package = "@netlify/angular-runtime"
+  [plugins.inputs]
+    toBeEnabled = false
 
 [[redirects]]
   from = "/*"
