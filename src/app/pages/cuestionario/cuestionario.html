@@ -48,11 +48,6 @@
           No
         </button>
       </div>
-
-      <!-- Link informativo -->
-      <a href="#" class="quiz-card__link">
-        <span>ⓘ</span> Ver más información sobre los requisitos
-      </a>
     </div>
   </div>
 
@@ -63,7 +58,7 @@
     </button>
     <div class="quiz-footer__right">
       <!-- <button class="btn-save" (click)="saveDraft()">Guardar borrador</button> -->
-      <button class="btn-results" routerLink="/resultados">
+      <button class="btn-results" (click)="onSubmit()">
         Enviar
       </button>
     </div>
