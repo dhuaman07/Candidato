@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['home.css']
 })
 export class HomeComponent {
+  homeVideoSrc = 'assets/videos/home.mp4';
+  homeVideoPoster = 'assets/images/portada.png';
 
   /**
    *

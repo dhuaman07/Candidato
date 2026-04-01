@@ -49,6 +49,28 @@
   </div>
 </section>
 
+<!-- VIDEO SECTION -->
+<section class="home-video">
+  <div class="home-video__container">
+    <span class="section-label">VIDEO DESTACADO</span>
+    <h2 class="home-video__title">Conoce las propuestas de tu candidato</h2>
+    <p class="home-video__subtitle">
+      Conoce cómo tus propuestas y tu voto informado fortalecen la transparencia, la fiscalización y el desarrollo de una gestión pública que represente a todos.    </p>
+    <div class="home-video__player-wrapper">
+      <video
+        class="home-video__player"
+        [poster]="homeVideoPoster"
+        controls
+        playsinline
+        preload="metadata"
+      >
+        <source [src]="'/assets/video/informacion.mp4'" type="video/mp4" />
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </div>
+  </div>
+</section>
+
 <!-- FEATURES SECTION -->
 <section class="features">
   <div class="features__container">
