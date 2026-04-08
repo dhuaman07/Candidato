@@ -39,30 +39,30 @@ export class PerfilComponent {
     education: [
       {
         degree: 'Doctora en Psicología',
-        institution: 'Universidad Nacional Mayor de San Marcos'
+        institution: 'UNIVERSIDAD NACIONAL MAYOR DE SAN MARCOS'
       },
       {
         degree: 'Magister en Evaluación y Acreditación de la calidad educativa',
-        institution: 'Universidad ---'
+        institution: 'UNIVERSIDAD NACIONAL DANIEL ALCIDES CARRIÓN'
       },
       {
         degree: 'Magister en Políticas sociales ',
-        institution: 'Universidad ---'
+        institution: 'UNIVERSIDAD NACIONAL DEL CENTRO DEL PERÚ'
       }
       ,
       {
         degree: 'Magister en Educación ',
-        institution: 'Universidad ---'
+        institution: 'UNIVERSIDAD PERUANA LOS ANDES'
       } 
       ,
       {
         degree: 'Licenciada en Psicología ',
-        institution: 'Universidad ---'
+        institution: 'UNIVERSIDAD CONTINENTAL'
       }   
       ,
       {
         degree: 'Licenciada en Pedagogía y Humanidades - especialidad de Matemática y Física ',
-        institution: 'Universidad ---'
+        institution: 'UNIVERSIDAD NACIONAL DEL CENTRO DEL PERÚ'
       }   
     ],
 
